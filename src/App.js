@@ -1,5 +1,6 @@
 import React from 'react';
-import CalendarMonthMP from './components/Calender/CalendarMonthMP/CalendarMonthMP'
+// import CalendarMonthMP from './components/Calender/CalendarMonthMP/CalendarMonthMP'
+import { CalendarMonthMP } from '../lib/index'
 
 export default class App extends React.Component{
   constructor(props){
@@ -27,11 +28,11 @@ export default class App extends React.Component{
     return (
       <div>
         <button onClick={this.handleClick}>月控件</button>
-        <CalendarMonthMP 
+         <CalendarMonthMP 
           showCalendarMonth={showCalendarMonth} 
           config={config} 
           onConfirm={this.onConfirm}
-        />
+        /> 
       </div>
     )
   }

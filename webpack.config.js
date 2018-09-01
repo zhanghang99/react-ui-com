@@ -1,15 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');//在js文件中引用css，scss,less
-var ExtractTextPlugin = require('extract-text-webpack-plugin');//css样式从js文件中分离出来,需要通过命令行安装 extract-text-webpack-plugin依赖包
+const ExtractTextPlugin = require('extract-text-webpack-plugin');//css样式从js文件中分离出来,需要通过命令行安装 extract-text-webpack-plugin依赖包
+
 module.exports = {
   entry:{
-    app:'./src/index.js'
-  },
-  output:{
-    // filename:'index.js',
-    // path:'/lib'
+    app:'./src/main.js'
+	},
+	output:{
     filename: "index.js",
-		path: path.resolve(__dirname,"./dist"),
+		path: path.resolve(__dirname,"./lib"),
   },
   module:{
     rules:[
@@ -26,23 +25,12 @@ module.exports = {
 			{ 
 				test: /\.css$/, 
 				exclude:/node_modules/,
+				// loader: ExtractTextPlugin.extract("style-loader", "css-loader")
 				use: [
           'style-loader',
 					"css-loader"
 				],
 			},
-			{
-				test: /\.scss$/,
-				use: [
-          'style-loader',
-					"css-loader",
-          "sass-loader",
-				]
-      },
-//       {
-//         test: /\.scss$/,
-//         loader: ExtractTextPlugin.extract("style-loader", 'css-loader!sass-loader')//这里用了样式分离出来的插件，如果不想分离出来，可以直接这样写 loader:'style!css!sass'            
-//       },
     ]
   },
   devServer: {
@@ -60,11 +48,4 @@ module.exports = {
 			// }
 		}
   },
-  plugins: [
-      new HtmlWebpackPlugin({
-          title:'Hello World',
-          template: './src/index.html' //模板地址
-      }),
-      // new ExtractTextPlugin("style.css")//提取出来的样式放在style.css文件中
-  ]
 }

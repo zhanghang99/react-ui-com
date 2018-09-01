@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Nodejs\\node.exe',
+1 verbose cli   'D:\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   'react-ui-com',
+1 verbose cli   '--save-dev' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData react-ui-com
+8 silly fetchNamedPackageData react-ui-com
+9 silly mapToRegistry name react-ui-com
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'react-ui-com',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'react-ui-com',
+12 silly mapToRegistry   name: 'react-ui-com',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/react-ui-com
+14 verbose request uri https://registry.npmjs.org/react-ui-com
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 00:42:21
+17 verbose request using bearer token for auth
+18 verbose request id 40fe7e1061974e61
+19 http request GET https://registry.npmjs.org/react-ui-com
+20 http 200 https://registry.npmjs.org/react-ui-com
+21 verbose headers { date: 'Sat, 01 Sep 2018 16:42:24 GMT',
+21 verbose headers   'content-type': 'application/json',
+21 verbose headers   'transfer-encoding': 'chunked',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'set-cookie': [ '__cfduid=d2ba66862fc238e0838a4473744c323ea1535820143; expires=Sun, 01-Sep-19 16:42:23 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+21 verbose headers   'cf-cache-status': 'MISS',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   'cf-ray': '4539309bd9566c04-SJC',
+21 verbose headers   etag: 'W/"dfaaa128fe2d88a3554c84bf155e96ff"',
+21 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 verbose headers   'last-modified': 'Sat, 01 Sep 2018 16:41:37 GMT',
+21 verbose headers   vary: 'accept-encoding, accept',
+21 verbose headers   'x-amz-meta-rev': '4-c047bb6ac7085b7f52e80fa60a01adec',
+21 verbose headers   server: 'cloudflare',
+21 verbose headers   'content-encoding': 'gzip' }
+22 silly get cb [ 200,
+22 silly get   { date: 'Sat, 01 Sep 2018 16:42:24 GMT',
+22 silly get     'content-type': 'application/json',
+22 silly get     'transfer-encoding': 'chunked',
+22 silly get     connection: 'keep-alive',
+22 silly get     'set-cookie': [ '__cfduid=d2ba66862fc238e0838a4473744c323ea1535820143; expires=Sun, 01-Sep-19 16:42:23 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+22 silly get     'cf-cache-status': 'MISS',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     'cf-ray': '4539309bd9566c04-SJC',
+22 silly get     etag: 'W/"dfaaa128fe2d88a3554c84bf155e96ff"',
+22 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+22 silly get     'last-modified': 'Sat, 01 Sep 2018 16:41:37 GMT',
+22 silly get     vary: 'accept-encoding, accept',
+22 silly get     'x-amz-meta-rev': '4-c047bb6ac7085b7f52e80fa60a01adec',
+22 silly get     server: 'cloudflare',
+22 silly get     'content-encoding': 'gzip' } ]
+23 verbose get saving react-ui-com to C:\Users\zhang\AppData\Roaming\npm-cache\registry.npmjs.org\react-ui-com\.cache.json
+24 verbose correctMkdir C:\Users\zhang\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly rollbackFailedOptional Starting
+38 silly rollbackFailedOptional Finishing
+39 silly runTopLevelLifecycles Finishing
+40 silly install printInstalled
+41 verbose stack Error: Refusing to install react-ui-com as a dependency of itself
+41 verbose stack     at checkSelf (D:\Nodejs\node_modules\npm\lib\install\validate-args.js:53:14)
+41 verbose stack     at Array.<anonymous> (D:\Nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+41 verbose stack     at LOOP (D:\Nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+41 verbose stack     at chain (D:\Nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+41 verbose stack     at D:\Nodejs\node_modules\npm\lib\install\validate-args.js:16:5
+41 verbose stack     at D:\Nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:52:35
+41 verbose stack     at Array.forEach (native)
+41 verbose stack     at D:\Nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:52:11
+41 verbose stack     at Array.forEach (native)
+41 verbose stack     at asyncMap (D:\Nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:51:8)
+42 verbose cwd D:\git\react-ui-com
+43 error Windows_NT 10.0.17134
+44 error argv "D:\\Nodejs\\node.exe" "D:\\Nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "react-ui-com" "--save-dev"
+45 error node v6.10.2
+46 error npm  v3.10.10
+47 error code ENOSELF
+48 error Refusing to install react-ui-com as a dependency of itself
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
