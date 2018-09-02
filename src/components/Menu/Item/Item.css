@@ -1,0 +1,12 @@
+.Item{
+  max-height: 1000px;
+  transition: all .5s;
+  overflow: hidden;
+}
+.Item.Hidden{
+  max-height: 0;
+  transition: all .5s;
+}
+.Item .ItemName{
+  padding:5px 30px;
+}

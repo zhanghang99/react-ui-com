@@ -1,38 +1,59 @@
 import React from 'react';
-// import CalendarMonthMP from './components/Calender/CalendarMonthMP/CalendarMonthMP'
-import { CalendarMonthMP } from '../lib/index'
+import SideNavigation from './components/Menu/SideNavigation/SideNavigation'
 
 export default class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      showCalendarMonth:false,
-      config:{
-        startYear:'1990',//下拉年份列表开始年份
-        minDate:'201508',//时间区间的开始时间
-        maxDate:'201807',//时间区间的结束时间
-        defaultTime:'201804'//初始化时间
-      }
+      list: [
+        {
+          FirstName:'PC',
+          url:'www.baidu.com'
+        },
+        {
+          FirstName:'PC端',
+          SecondLevel:[
+            {
+              SecondName:'General',
+              url:'www.baidu.com'
+            }
+          ]
+        },
+        {
+          FirstName:'PC端s',
+          SecondLevel:[
+            {
+              SecondName:'Generals',
+              url:'www.baidu.com'
+            }
+          ]
+        },
+        {
+          FirstName:'移动端',
+          SecondLevel:[
+            {
+              SecondName:'General1',
+              ThreeLevel:[
+                {
+                  item:'Button1',
+                  url:'www.baidu.com'
+                },
+                {
+                  item:'Icon1',
+                  url:'www.baidu.com'
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
-  handleClick = () => {
-    this.setState({
-      showCalendarMonth:true
-    })
-  }
-  onConfirm = (date) => {
-    console.log(date);
-  }
   render(){
-    const { showCalendarMonth ,config} = this.state;
+    const { list } = this.state;
     return (
       <div>
-        <button onClick={this.handleClick}>月控件</button>
-         <CalendarMonthMP 
-          showCalendarMonth={showCalendarMonth} 
-          config={config} 
-          onConfirm={this.onConfirm}
-        /> 
+        <SideNavigation list={list}/>
       </div>
     )
   }

@@ -1,0 +1,15 @@
+.MenuItemGroup{
+  max-height: 1000px;
+  transition: all .5s;
+  overflow: hidden;
+}
+.MenuItemGroup.Hidden{
+  max-height: 0;
+  transition: all .5s;
+}
+.MenuItemGroup .SecondName{
+  padding:5px 15px;
+}
+.MenuItemGroup .SecondName.current{
+  background:yellow
+}
